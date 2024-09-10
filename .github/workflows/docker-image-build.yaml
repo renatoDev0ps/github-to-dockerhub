@@ -18,7 +18,7 @@ jobs:
     - name: Get Application VERSION
       id: app_version
       run: |
-        VERSIONS=$(cat VERSIONS)
+        VERSIONS=$(cat ./VERSIONS)
         echo "VERSIONS=$VERSIONS" >> $GITHUB_ENV
 
     - name: Login to Docker Hub
