@@ -35,7 +35,7 @@ jobs:
         flavor: |
           latest=false
         tags: |
-          type=raw,value=v${{ env.VERSIONS }}
+          type=raw,value=$(echo v$VERSIONS)
 
     - name: Build and Push to Docker Hub
       id: docker_build
