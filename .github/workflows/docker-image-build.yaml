@@ -37,7 +37,7 @@ jobs:
           flavor: |
             latest=false
           tags: |
-            type=raw,value=${{ steps.app_version.outputs.APP_VERSION }}
+            type=raw,value=${{ steps.version.outputs.APP_VERSION }}
 
       - name: Build and Push to Docker Hub
         id: docker_build
