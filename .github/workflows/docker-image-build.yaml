@@ -17,7 +17,9 @@ jobs:
 
     - name: Get Application VERSION
       id: app_version
-      run: VERSIONS=$(cat VERSIONS)
+      run: |
+        VERSIONS=$(cat VERSIONS)
+        echo "VERSIONS=${VERSIONS}" >> $GITHUB_ENV
 
     - name: Login to Docker Hub
       uses: docker/login-action@v3
@@ -33,7 +35,7 @@ jobs:
         flavor: |
           latest=false
         tags: |
-          type=raw,value=${{ env.app_version.outputs.VERSIONS }}
+          type=raw,value=${{ env.VERSIONS }}
 
     - name: Build and Push to Docker Hub
       id: docker_build
