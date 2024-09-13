@@ -18,7 +18,7 @@ jobs:
 
     - name: Set up SSH Key
       run: |
-        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ?home/gitdeploy/.ssh/id_rsa
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > /home/gitdeploy/.ssh/id_rsa
         chmod 600 /home/gitdeploy/.ssh/id_rsa
 
     - name: Add server to known_hosts
