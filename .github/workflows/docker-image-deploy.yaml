@@ -8,7 +8,7 @@ on:
 jobs:
   deploy:
     name: Deploy to Ubuntu Server
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout Repository
@@ -20,11 +20,6 @@ jobs:
       run: |
         echo "${{ secrets.SSH_PRIVATE_KEY }}" > /home/gitdeploy/.ssh/id_rsa
         chmod 600 /home/gitdeploy/.ssh/id_rsa
-
-    - name: Print Key
-      run: |
-        whoami
-        echo /home/gitdeploy/.ssh/id_rsa
 
     - name: Add server to known_hosts
       run: |
