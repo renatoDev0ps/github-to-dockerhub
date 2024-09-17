@@ -42,29 +42,30 @@ jobs:
 
     - name: Pull Docker Image from Docker Hub
       run: |
-        whoami
+        whoami > WHOAMI
+        echo "WHOAMI=$(cat WHOAMI)"
         eval `ssh-agent -s`
         ssh-add private.key 
-        sshpass -p "${{ secrets.PSWD }}" ssh -i private.key -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }}" \
+        sshpass -p "${{ secrets.PSWD }}" ssh -v -i private.key -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }}" \
         "docker pull 1renatodevops/docker-dockerhub:${{ env.VERSIONS }}"
 
     - name: Stop and Remove Existing Container
       run: |
         eval `ssh-agent -s`
         ssh-add private.key 
-        sshpass -p "${{ secrets.PSWD }}" ssh -i private.key -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }}" \
+        sshpass -p "${{ secrets.PSWD }}" ssh -v -i private.key -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }}" \
         "docker stop nginx || true && docker rm nginx || true"
 
     - name: Run Docker Container
       run: |
         eval `ssh-agent -s`
         ssh-add private.key 
-        sshpass -p "${{ secrets.PSWD }}" ssh -i private.key -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }}" \
+        sshpass -p "${{ secrets.PSWD }}" ssh -v -i private.key -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }}" \
         "docker run -d --name nginx -p 80:80 1renatodevops/docker-dockerhub:${{ env.VERSIONS }}"
 
     - name: Verify Deployment
       run: |
         eval `ssh-agent -s`
         ssh-add private.key 
-        sshpass -p "${{ secrets.PSWD }}" ssh -i private.key -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }}" \
+        sshpass -p "${{ secrets.PSWD }}" ssh -v -i private.key -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }}" \
         "docker ps | grep nginx"
