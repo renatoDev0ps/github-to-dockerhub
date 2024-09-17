@@ -40,6 +40,18 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Get Application VERSION
+      id: app_version
+      run: |
+        VERSIONS=$(cat VERSIONS | tr -d '\n')
+        echo "VERSIONS=$VERSIONS"
+        echo "VERSIONS=$VERSIONS" >> $GITHUB_ENV
+
     - name: Pull Docker Image from Docker Hub
       run: |
         whoami > WHOAMI
@@ -47,7 +59,7 @@ jobs:
         eval `ssh-agent -s`
         ssh-add private.key 
         sshpass -p "${{ secrets.PSWD }}" ssh -v -i private.key -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }}" <<'ENDSSH'
-        docker pull 1renatodevops/docker-dockerhub:0.1.1
+        docker pull 1renatodevops/docker-dockerhub:${{ env.VERSIONS }}
         ENDSSH
 
     - name: Stop and Remove Existing Container
@@ -62,7 +74,7 @@ jobs:
         eval `ssh-agent -s`
         ssh-add private.key 
         sshpass -p "${{ secrets.PSWD }}" ssh -v -i private.key -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }}" \
-        "docker run -d --name nginx -p 80:80 1renatodevops/docker-dockerhub:0.1.1"
+        "docker run -d --name nginx -p 80:80 1renatodevops/docker-dockerhub:${{ env.VERSIONS }}"
 
     - name: Verify Deployment
       run: |
