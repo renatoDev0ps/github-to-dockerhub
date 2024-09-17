@@ -3,7 +3,7 @@ name: Deploy to On-Premise Ubuntu Server
 on:
   push:
     branches:
-      - develop
+      - feat/*
 
 jobs:
   deploy:
@@ -47,7 +47,7 @@ jobs:
         eval `ssh-agent -s`
         ssh-add private.key 
         sshpass -p "${{ secrets.PSWD }}" ssh -v -i private.key -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }}" <<'ENDSSH'
-        docker pull 1renatodevops/docker-dockerhub:0.1.5
+        docker pull 1renatodevops/docker-dockerhub:0.1.6
         ENDSSH
 
     - name: Stop and Remove Existing Container
@@ -62,7 +62,7 @@ jobs:
         eval `ssh-agent -s`
         ssh-add private.key 
         sshpass -p "${{ secrets.PSWD }}" ssh -v -i private.key -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }}" \
-        "docker run -d --name nginx -p 80:80 1renatodevops/docker-dockerhub:0.1.5"
+        "docker run -d --name nginx -p 80:80 1renatodevops/docker-dockerhub:0.1.6"
 
     - name: Verify Deployment
       run: |
