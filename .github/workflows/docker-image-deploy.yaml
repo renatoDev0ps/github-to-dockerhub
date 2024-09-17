@@ -42,20 +42,28 @@ jobs:
 
     - name: Pull Docker Image from Docker Hub
       run: |
-        ssh -i /home/gitdeploy/.ssh/id_rsa -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }}" \
+        eval `ssh-agent -s`
+        ssh-add private.key 
+        ssh-keyscan -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }}" \
         "docker pull 1renatodevops/docker-dockerhub:${{ env.VERSIONS }}"
 
     - name: Stop and Remove Existing Container
       run: |
-        ssh -i /home/gitdeploy/.ssh/id_rsa -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }}" \
-        "docker stop my_app || true && docker rm my_app || true"
+        eval `ssh-agent -s`
+        ssh-add private.key 
+        ssh-keyscan -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }}" \
+        "docker stop nginx || true && docker rm nginx || true"
 
     - name: Run Docker Container
       run: |
-        ssh -i /home/gitdeploy/.ssh/id_rsa -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }}" \
-        "docker run -d --name my_app -p 80:80 1renatodevops/docker-dockerhub:${{ env.VERSIONS }}"
+        eval `ssh-agent -s`
+        ssh-add private.key 
+        ssh-keyscan -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }}" \
+        "docker run -d --name nginx -p 80:80 1renatodevops/docker-dockerhub:${{ env.VERSIONS }}"
 
     - name: Verify Deployment
       run: |
-        ssh -i /home/gitdeploy/.ssh/id_rsa -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }}" \
-        "docker ps | grep my_app"
+        eval `ssh-agent -s`
+        ssh-add private.key 
+        ssh-keyscan -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }}" \
+        "docker ps | grep nginx"
