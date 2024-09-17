@@ -46,8 +46,9 @@ jobs:
         echo "WHOAMI=$(cat WHOAMI)"
         eval `ssh-agent -s`
         ssh-add private.key 
-        sshpass -p "${{ secrets.PSWD }}" ssh -v -i private.key -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }}" \
-        "docker pull 1renatodevops/docker-dockerhub:${{ env.VERSIONS }}"
+        sshpass -p "${{ secrets.PSWD }}" ssh -v -i private.key -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }}" <<'ENDSSH'
+        docker pull 1renatodevops/docker-dockerhub:${{ env.VERSIONS }}
+        ENDSSH
 
     - name: Stop and Remove Existing Container
       run: |
