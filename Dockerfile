@@ -8,7 +8,7 @@ RUN yarn install --production --frozen-lockfile --silent
 
 RUN yarn build
 
-FROM node:20.12.2-alpine as app
+FROM node:20.12.2-alpine
 
 # RUN addgroup -S user && adduser -S user -G user
 # USER user
