@@ -19,8 +19,6 @@ COPY --from=appbuild /home/app/package.json ./package.json
 COPY --from=appbuild /home/app/yarn.lock ./yarn.lock
 COPY --from=appbuild /home/app/node_modules/ ./node_modules
 COPY --from=appbuild /home/app/build/ ./build
-COPY --from=appbuild /home/app/public/ ./public
+# COPY --from=appbuild /home/app/public/ ./public
 
 CMD yarn start
-
-FROM app as final
