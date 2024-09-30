@@ -2,9 +2,11 @@ FROM node:20.12.2-alpine AS appbuild
 
 WORKDIR /home/app
 
-COPY . .
+ADD package.json yarn.lock ./
 
 RUN yarn install --production --frozen-lockfile --silent
+
+ADD . .
 
 RUN yarn build
 
