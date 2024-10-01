@@ -1,7 +1,5 @@
 {
   "branches": [
-    "main",
-    "homolog",
     "develop"
   ],
   "plugins": [
