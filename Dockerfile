@@ -2,15 +2,13 @@ FROM node:20.12.2-alpine AS appbuild
 
 WORKDIR /home/app
 
-ADD package.json yarn.lock ./
+COPY . .
 
 RUN yarn install --production --frozen-lockfile --silent
 
-ADD . .
-
 RUN yarn build
 
-FROM node:20.12.2-alpine
+FROM node:20.12.2-alpine as app
 
 # RUN addgroup -S user && adduser -S user -G user
 # USER user
@@ -21,6 +19,9 @@ COPY --from=appbuild /home/app/package.json ./package.json
 COPY --from=appbuild /home/app/yarn.lock ./yarn.lock
 COPY --from=appbuild /home/app/node_modules/ ./node_modules
 COPY --from=appbuild /home/app/build/ ./build
-# COPY --from=appbuild /home/app/public/ ./public
+COPY --from=appbuild /home/app/public/ ./public
+COPY --from=appbuild /home/app/src/ ./src
 
 CMD yarn start
+
+FROM app as final
