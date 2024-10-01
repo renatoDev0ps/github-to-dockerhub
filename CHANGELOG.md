@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.1.1...v1.2.0) (2024-10-01)
+
+
+### Features
+
+* **devops:** :fire: testando semantic version ([829e18f](https://github.com/renatoDev0ps/github-to-dockerhub/commit/829e18f646bed78c53426fee5d1df8473d38fd73))
+
 ## [1.1.1](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.1.0...v1.1.1) (2024-10-01)
 
 
