@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.1.0...v1.1.1) (2024-10-01)
+
+
+### Bug Fixes
+
+* Release on main branch ([71b46a3](https://github.com/renatoDev0ps/github-to-dockerhub/commit/71b46a3f9f77da3834980c644f0ec60fa9b8053a))
+
 # [1.1.0](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.0.0...v1.1.0) (2024-10-01)
 
 
