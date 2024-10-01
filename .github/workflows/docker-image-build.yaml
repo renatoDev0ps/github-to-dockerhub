@@ -29,7 +29,7 @@ jobs:
       - name: Semantic Release
         id: semantic_release
         uses: cycjimmy/semantic-release-action@v4
-        env:
+        env: 
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Generate TAG
