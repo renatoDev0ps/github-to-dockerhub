@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - develop
-  pull_request:
 
 permissions:
   id-token: write
@@ -43,7 +42,6 @@ jobs:
         run: |
           echo "${{ steps.semantic_release.outputs.new_release_version }}"
           echo "${{ steps.generate_tag.outputs.sha }}"
-
 
   release:
     needs: build
