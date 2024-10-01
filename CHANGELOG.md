@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.0.0...v1.1.0) (2024-10-01)
+
+
+### Features
+
+* Remove unused branch configuration ([f6bdbd5](https://github.com/renatoDev0ps/github-to-dockerhub/commit/f6bdbd5b37e05a46ebb2d8d3c0ca4f61ea96edfa))
+
 # 1.0.0 (2024-10-01)
 
 
