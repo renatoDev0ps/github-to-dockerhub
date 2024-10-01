@@ -60,5 +60,5 @@ jobs:
         with:
           push: true
           tags: |
-            jvictorsm/jvictorsm:${{ needs.build.outputs.NEW_VERSION }} 
-            jvictorsm/jvictorsm:${{ needs.build.outputs.TAG }} 
+            1renatodevops/docker-dockerhub:${{ needs.build.outputs.NEW_VERSION }} 
+            1renatodevops/docker-dockerhub:${{ needs.build.outputs.TAG }} 
