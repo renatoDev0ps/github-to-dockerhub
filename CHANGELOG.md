@@ -1,3 +1,11 @@
+# [1.3.0](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.2.0...v1.3.0) (2024-10-01)
+
+
+### Features
+
+* Add support for branch-specific releases ([ce2d10d](https://github.com/renatoDev0ps/github-to-dockerhub/commit/ce2d10d5e97e564496045be75de6f36b3c2a2612))
+* Trigger builds on pull requests ([a0a40f7](https://github.com/renatoDev0ps/github-to-dockerhub/commit/a0a40f7dfe57262bc4b567c16fb280d6e65f5480))
+
 # [1.2.0](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.1.1...v1.2.0) (2024-10-01)
 
 
