@@ -2,7 +2,15 @@
   "branches": [
     "develop",
     "homolog",
-    "main"
+    "main",
+    {
+      "name": "feat/*",
+      "prerelease": true
+    },
+    {
+      "name": "fix/*",
+      "prerelease": true
+    }
   ],
   "plugins": [
     "@semantic-release/commit-analyzer",
