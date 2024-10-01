@@ -3,7 +3,7 @@ name: Deploy to On-Premise Ubuntu Server
 on:
   push:
     branches:
-      - main
+      - feat/*
 
 jobs:
   deploy:
@@ -31,7 +31,8 @@ jobs:
     - name: Add server to known_hosts
       run: |
         eval `ssh-agent -s`
-        ssh-add private.key -H -f ${{ secrets.SERVER_IP }} >> /home/gitdeploy/.ssh/known_hosts
+        ssh-add private.key 
+        ssh-keyscan -H ${{ secrets.SERVER_IP }} >> /home/gitdeploy/.ssh/known_hosts
 
     - name: Login to Docker Hub
       uses: docker/login-action@v3
@@ -41,20 +42,31 @@ jobs:
 
     - name: Pull Docker Image from Docker Hub
       run: |
-        ssh -i /home/gitdeploy/.ssh/id_rsa -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }} \
-        "docker pull 1renatodevops/docker-dockerhub:${{ env.VERSIONS }}"
+        whoami > WHOAMI
+        echo "WHOAMI=$(cat WHOAMI)"
+        eval `ssh-agent -s`
+        ssh-add private.key 
+        sshpass -p "${{ secrets.PSWD }}" ssh -v -i private.key -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }}" <<'ENDSSH'
+        docker pull 1renatodevops/docker-dockerhub:0.1.6
+        ENDSSH
 
     - name: Stop and Remove Existing Container
       run: |
-        ssh -i /home/gitdeploy/.ssh/id_rsa -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }} \
-        "docker stop my_app || true && docker rm my_app || true"
+        eval `ssh-agent -s`
+        ssh-add private.key 
+        sshpass -p "${{ secrets.PSWD }}" ssh -v -i private.key -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }}" \
+        "docker stop nginx || true && docker rm nginx || true"
 
     - name: Run Docker Container
       run: |
-        ssh -i /home/gitdeploy/.ssh/id_rsa -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }} \
-        "docker run -d --name my_app -p 80:80 1renatodevops/docker-dockerhub:${{ env.VERSIONS }}"
+        eval `ssh-agent -s`
+        ssh-add private.key 
+        sshpass -p "${{ secrets.PSWD }}" ssh -v -i private.key -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }}" \
+        "docker run -d --name nginx -p 80:80 1renatodevops/docker-dockerhub:0.1.6"
 
     - name: Verify Deployment
       run: |
-        ssh -i /home/gitdeploy/.ssh/id_rsa -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }} \
-        "docker ps | grep my_app"
+        eval `ssh-agent -s`
+        ssh-add private.key 
+        sshpass -p "${{ secrets.PSWD }}" ssh -v -i private.key -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }}" \
+        "docker ps | grep nginx"
