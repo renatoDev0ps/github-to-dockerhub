@@ -37,6 +37,9 @@ jobs:
         ssh-add private.key
         ssh-keyscan -H ${{ secrets.SERVER_IP }} >> /home/gitdeploy/.ssh/known_hosts
 
+    - name: Install jq
+      run: apt install -y jq
+
     - name: Get Application VERSION
       id: app_version
       run: |
