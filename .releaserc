@@ -1,6 +1,6 @@
 {
   "branches": [
-    "develop", "homolog", "main"
+    "develop","homolog","main"
   ],
   "plugins": [
     "@semantic-release/commit-analyzer",
@@ -24,16 +24,10 @@
           "CHANGELOG.md",
           "package.json",
           "yarn.lock",
-          "VERSION"
+          "VERSIONS"
         ]
       }
     ],
-    "@semantic-release/github",
-    [
-      "@semantic-release/exec",
-      {
-        "prepareCmd": "echo ${nextRelease.version} > VERSION"
-      }
-    ]
+    "@semantic-release/github"
   ]
 }
