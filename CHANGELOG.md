@@ -1,3 +1,10 @@
+## [1.10.5](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.10.4...v1.10.5) (2024-10-02)
+
+
+### Bug Fixes
+
+* add ' ([da99036](https://github.com/renatoDev0ps/github-to-dockerhub/commit/da99036239d5d6cf78aee521f9dbd566ed4ba96a))
+
 ## [1.10.4](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.10.3...v1.10.4) (2024-10-02)
 
 
