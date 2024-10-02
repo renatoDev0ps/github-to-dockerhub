@@ -1,3 +1,16 @@
+# [1.6.0](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.5.0...v1.6.0) (2024-10-02)
+
+
+### Bug Fixes
+
+* Update release configuration ([30b8d0e](https://github.com/renatoDev0ps/github-to-dockerhub/commit/30b8d0ecdc59e587eded35a4d67bfc1f7abe6114))
+
+
+### Features
+
+* Implement automatic versioning ([5b40e9b](https://github.com/renatoDev0ps/github-to-dockerhub/commit/5b40e9bc2739df5fd1d88715b44e6528514b6534))
+* Upgrade semantic-release and related dependencies ([93ea24b](https://github.com/renatoDev0ps/github-to-dockerhub/commit/93ea24b8f60b51225db735bcf8f05030dba6c666))
+
 # [1.5.0](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.4.0...v1.5.0) (2024-10-02)
 
 
