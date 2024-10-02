@@ -51,3 +51,7 @@ jobs:
           version=$(jq -r '.version' "./package.json") > VERSIONS
           echo $version 
           cat VERSIONS
+
+  cd:
+    needs: [release]
+    uses: renatoDev0ps/github-to-dockerhub/.github/workflows/docker-image-deploy.yaml@develop
