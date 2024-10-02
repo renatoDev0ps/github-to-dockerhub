@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.6.0...v1.7.0) (2024-10-02)
+
+
+### Features
+
+* Add VERSION file for release tracking ([57e1a9e](https://github.com/renatoDev0ps/github-to-dockerhub/commit/57e1a9e91b24b8325255fc8314f6f90d47fa991c))
+
 # [1.6.0](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.5.0...v1.6.0) (2024-10-02)
 
 
