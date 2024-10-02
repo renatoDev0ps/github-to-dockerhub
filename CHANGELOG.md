@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.9.0...v1.10.0) (2024-10-02)
+
+
+### Features
+
+* Add jq installation for image deployment ([462656b](https://github.com/renatoDev0ps/github-to-dockerhub/commit/462656b98502d4722f144e3ca16d8f45f83aeb2d))
+
 # [1.9.0](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.8.0...v1.9.0) (2024-10-02)
 
 
