@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.7.3...v1.8.0) (2024-10-02)
+
+
+### Features
+
+* Add VERSION file generation ([4bbd326](https://github.com/renatoDev0ps/github-to-dockerhub/commit/4bbd32634e534c6ca9e9212b05dafd785b851510))
+
 ## [1.7.3](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.7.2...v1.7.3) (2024-10-02)
 
 
