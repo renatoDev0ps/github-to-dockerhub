@@ -23,8 +23,7 @@
         "assets": [
           "CHANGELOG.md",
           "package.json",
-          "yarn.lock",
-          "VERSIONS"
+          "yarn.lock"
         ]
       }
     ],

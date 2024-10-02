@@ -46,4 +46,6 @@ jobs:
             1renatodevops/docker-dockerhub:${{ steps.generate_tag.outputs.sha }}
 
       - name: New VERSION file
-        run: echo ${{ steps.semantic_release.outputs.new_release_version }} > VERSIONS
+        run: |
+          version=$(jq -r ‘.version’ “./package.json”) 
+          echo $version
