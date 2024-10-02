@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.8.0...v1.9.0) (2024-10-02)
+
+
+### Features
+
+* Trigger image deployment on push to main, homolog, and develop ([95c9d7f](https://github.com/renatoDev0ps/github-to-dockerhub/commit/95c9d7fd11d1d600a1a64723f7668bfc6762023c))
+
 # [1.8.0](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.7.3...v1.8.0) (2024-10-02)
 
 
