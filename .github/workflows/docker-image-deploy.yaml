@@ -2,11 +2,11 @@ name: "[CD] Deploy to Server"
 
 on:
   workflow_dispatch:
-  # push:
-  #   branches:
-  #     - main
-  #     - homolog
-  #     - develop
+  push:
+    branches:
+      - main
+      - homolog
+      - develop
 
 jobs:
   deploy:
@@ -40,7 +40,7 @@ jobs:
     - name: Get Application VERSION
       id: app_version
       run: |
-        VERSIONS=$(cat VERSIONS | tr -d '\n')
+        VERSIONS=$(jq -r '.version' "./package.json")
         echo "VERSIONS=$VERSIONS"
         echo "VERSIONS=$VERSIONS" >> $GITHUB_ENV
 
