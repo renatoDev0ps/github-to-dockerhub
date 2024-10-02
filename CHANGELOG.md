@@ -1,3 +1,10 @@
+## [1.10.3](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.10.2...v1.10.3) (2024-10-02)
+
+
+### Bug Fixes
+
+* Trigger deployment via workflow call ([71d1931](https://github.com/renatoDev0ps/github-to-dockerhub/commit/71d1931be79289f0d83c0290fe53ed102c795845))
+
 ## [1.10.2](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.10.1...v1.10.2) (2024-10-02)
 
 
