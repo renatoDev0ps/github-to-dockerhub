@@ -1,3 +1,10 @@
+## [1.7.2](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.7.1...v1.7.2) (2024-10-02)
+
+
+### Bug Fixes
+
+* Correct syntax in version extraction ([4a8f0e6](https://github.com/renatoDev0ps/github-to-dockerhub/commit/4a8f0e6f0b47a5972a2a61eeef365633aa3f7131))
+
 ## [1.7.1](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.7.0...v1.7.1) (2024-10-02)
 
 
