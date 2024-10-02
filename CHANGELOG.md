@@ -1,3 +1,17 @@
+# [1.4.0](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.3.0...v1.4.0) (2024-10-02)
+
+
+### Bug Fixes
+
+* Streamline Docker image build workflow ([b75de9e](https://github.com/renatoDev0ps/github-to-dockerhub/commit/b75de9ef24c81de96f8a6b41ba34f8413d3d3453))
+
+
+### Features
+
+* Add .gitignore entry for yarn-error.log ([f95114b](https://github.com/renatoDev0ps/github-to-dockerhub/commit/f95114b01dd19329fcc01e68c469d0fbcab3ffa8))
+* Add support for branch-specific releases ([f1a2893](https://github.com/renatoDev0ps/github-to-dockerhub/commit/f1a28930d44b9d8c135073c6e0b4aafeee3e2937))
+* Implement prerelease versioning based on branch names ([7d0e881](https://github.com/renatoDev0ps/github-to-dockerhub/commit/7d0e881ddb8db11161b26cf41a01cf53360f431d))
+
 # [1.3.0](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.2.0...v1.3.0) (2024-10-01)
 
 
