@@ -1,3 +1,10 @@
+## [1.10.4](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.10.3...v1.10.4) (2024-10-02)
+
+
+### Bug Fixes
+
+* Integrate docker image build workflow ([e5428c5](https://github.com/renatoDev0ps/github-to-dockerhub/commit/e5428c57b073c2b69bb6e5be0cc49dfc28cf2796))
+
 ## [1.10.3](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.10.2...v1.10.3) (2024-10-02)
 
 
