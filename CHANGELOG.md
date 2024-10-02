@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.7.0...v1.7.1) (2024-10-02)
+
+
+### Bug Fixes
+
+* Docker build workflow now extracts version from package.json ([75b10bb](https://github.com/renatoDev0ps/github-to-dockerhub/commit/75b10bbc096b53e96a6deae806f19a55aedce728))
+
 # [1.7.0](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.6.0...v1.7.0) (2024-10-02)
 
 
