@@ -1,4 +1,4 @@
-name: "[DEV] Integration Test"
+name: "[CI] Quality Gate"
 on:
   workflow_dispatch:
   pull_request:

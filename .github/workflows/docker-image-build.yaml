@@ -19,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Semantic Release
+      - name: Generate Semantic Release
         id: semantic_release
         uses: cycjimmy/semantic-release-action@v4
         env: 
