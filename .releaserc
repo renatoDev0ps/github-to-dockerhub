@@ -1,16 +1,6 @@
 {
   "branches": [
-    "develop",
-    "homolog",
-    "main",
-    {
-      "name": "feat/*",
-      "prerelease": true
-    },
-    {
-      "name": "fix/*",
-      "prerelease": true
-    }
+    "develop","homolog","main"
   ],
   "plugins": [
     "@semantic-release/commit-analyzer",
@@ -38,8 +28,5 @@
       }
     ],
     "@semantic-release/github"
-  ],
-  "ci": {
-    "prereleaseTrigger": "pull_request"
-  }
+  ]
 }
