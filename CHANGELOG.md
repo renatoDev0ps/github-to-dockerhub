@@ -1,3 +1,10 @@
+## [1.7.3](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.7.2...v1.7.3) (2024-10-02)
+
+
+### Bug Fixes
+
+* Use package.json version for Docker image tag ([a7e070e](https://github.com/renatoDev0ps/github-to-dockerhub/commit/a7e070ee065fa242720d90f21a3cdfca0c0f382c))
+
 ## [1.7.2](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.7.1...v1.7.2) (2024-10-02)
 
 
