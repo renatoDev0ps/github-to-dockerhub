@@ -47,5 +47,5 @@ jobs:
 
       - name: New VERSION file
         run: |
-          version=$(jq -r '.version' "./package.json") 
+          version=$(jq -r '.version' "./package.json") > VERSIONS
           echo $version 
