@@ -1,3 +1,10 @@
+## [1.10.1](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.10.0...v1.10.1) (2024-10-02)
+
+
+### Bug Fixes
+
+* Install jq using sudo ([be0595b](https://github.com/renatoDev0ps/github-to-dockerhub/commit/be0595b45f8cb98fe92d6bb341b269f6ecf4dc25))
+
 # [1.10.0](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.9.0...v1.10.0) (2024-10-02)
 
 
