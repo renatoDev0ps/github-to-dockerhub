@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.4.0...v1.5.0) (2024-10-02)
+
+
+### Features
+
+* Improve CI/CD workflows ([86ee68e](https://github.com/renatoDev0ps/github-to-dockerhub/commit/86ee68e6960afad95364080204e45225dff270af))
+
 # [1.4.0](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.3.0...v1.4.0) (2024-10-02)
 
 
