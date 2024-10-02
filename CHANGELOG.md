@@ -1,3 +1,10 @@
+## [1.10.6](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.10.5...v1.10.6) (2024-10-02)
+
+
+### Bug Fixes
+
+* **infra:** edit pipeline test ([bc89baf](https://github.com/renatoDev0ps/github-to-dockerhub/commit/bc89bafa2ae2c2f3e918659c77e17e0dee1ed036))
+
 ## [1.10.5](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.10.4...v1.10.5) (2024-10-02)
 
 
