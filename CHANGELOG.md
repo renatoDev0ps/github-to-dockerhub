@@ -1,3 +1,10 @@
+## [1.10.10](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.10.9...v1.10.10) (2024-10-04)
+
+
+### Bug Fixes
+
+* Improve workflow naming ([abf11e6](https://github.com/renatoDev0ps/github-to-dockerhub/commit/abf11e6af9d8547cf92059a97ec1afd72eff50c8))
+
 ## [1.10.9](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.10.8...v1.10.9) (2024-10-04)
 
 
