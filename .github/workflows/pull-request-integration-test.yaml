@@ -1,0 +1,20 @@
+name: (CI) Quality Gate
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+      - homolog
+      - develop
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node Version
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.12.2
+          cache: yarn

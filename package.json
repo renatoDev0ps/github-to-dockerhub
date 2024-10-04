@@ -1,6 +1,6 @@
 {
   "name": "github-to-dokcerhub",
-  "version": "0.1.0",
+  "version": "1.10.13",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -38,9 +38,11 @@
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^13.0.0",
+    "@semantic-release/exec": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^11.0.0",
     "@semantic-release/npm": "^12.0.1",
-    "@semantic-release/release-notes-generator": "^14.0.1"
+    "@semantic-release/release-notes-generator": "^14.0.1",
+    "semantic-release": "^24.1.2"
   }
 }
