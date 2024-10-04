@@ -1,3 +1,10 @@
+## [1.10.12](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.10.11...v1.10.12) (2024-10-04)
+
+
+### Bug Fixes
+
+* Update build workflow to trigger on `develop` branch only ([a8e6e96](https://github.com/renatoDev0ps/github-to-dockerhub/commit/a8e6e96657ac00db7b7e5cccb59022a458a15ff0))
+
 ## [1.10.11](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.10.10...v1.10.11) (2024-10-04)
 
 
