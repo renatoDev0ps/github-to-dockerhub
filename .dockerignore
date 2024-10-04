@@ -1,0 +1,21 @@
+# Node.js dependencies
+node_modules/
+build/
+
+# Git files
+.git
+.gitignore
+LICENSE
+CHANGELOG.md
+README.md
+
+# Docker files
+*Dockerfile*
+docker-compose*
+
+# Other files to ignore
+*.log
+*.pid
+*.tmp
+*.cache
+*.env
