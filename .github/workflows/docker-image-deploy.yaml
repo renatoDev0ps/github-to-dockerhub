@@ -2,7 +2,10 @@ name: "[CD] Deploy to Server"
 
 on:
   workflow_dispatch:
-  workflow_call:
+  workflow_run:
+    workflows: ["[CI] Pipeline"]
+    types:
+      - completed
 
 jobs:
   deploy:
