@@ -1,3 +1,10 @@
+## [1.10.9](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.10.8...v1.10.9) (2024-10-04)
+
+
+### Bug Fixes
+
+*  Docker deploy workflow ([89cd0f4](https://github.com/renatoDev0ps/github-to-dockerhub/commit/89cd0f4e191d41a75be5f5f1372da0f25fa1608b))
+
 ## [1.10.8](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.10.7...v1.10.8) (2024-10-04)
 
 
