@@ -1,3 +1,10 @@
+## [1.10.13](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.10.12...v1.10.13) (2024-10-04)
+
+
+### Bug Fixes
+
+* teste ([f4d5a4d](https://github.com/renatoDev0ps/github-to-dockerhub/commit/f4d5a4d71a3fb37ff73faef450e1a1749749d3d7))
+
 ## [1.10.12](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.10.11...v1.10.12) (2024-10-04)
 
 
