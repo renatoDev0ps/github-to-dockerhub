@@ -1,3 +1,10 @@
+## [1.10.7](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.10.6...v1.10.7) (2024-10-04)
+
+
+### Bug Fixes
+
+* Use self-hosted runner for CD workflow ([bcd25c0](https://github.com/renatoDev0ps/github-to-dockerhub/commit/bcd25c0f16ddd1321fd279aff4de7b9f076f38ad))
+
 ## [1.10.6](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.10.5...v1.10.6) (2024-10-02)
 
 
