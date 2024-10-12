@@ -1,3 +1,10 @@
+## [1.10.14](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.10.13...v1.10.14) (2024-10-12)
+
+
+### Bug Fixes
+
+* Integrate Docker Hub login into CI workflow ([be8641a](https://github.com/renatoDev0ps/github-to-dockerhub/commit/be8641a7a32d64c45b64603de069d57f49451395))
+
 ## [1.10.13](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.10.12...v1.10.13) (2024-10-04)
 
 
