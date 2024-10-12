@@ -1,3 +1,10 @@
+## [1.10.15](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.10.14...v1.10.15) (2024-10-12)
+
+
+### Bug Fixes
+
+* Remove unnecessary branch restrictions ([3805c9c](https://github.com/renatoDev0ps/github-to-dockerhub/commit/3805c9c7cb9594949754035dd024c4e36d4955bf))
+
 ## [1.10.14](https://github.com/renatoDev0ps/github-to-dockerhub/compare/v1.10.13...v1.10.14) (2024-10-12)
 
 
